@@ -4,10 +4,13 @@ FROM golang:1.18-alpine
 
 WORKDIR /app
 
+COPY go.mod ./
+RUN go mod download
+
 COPY main.go .
 
-# RUN go build -o /docker-gs-ping
+RUN go build -o /docker-golang
 
 EXPOSE 8080
 
-CMD go run main.go
+CMD [ "/docker-golang" ]
