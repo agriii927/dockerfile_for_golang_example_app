@@ -1,5 +1,5 @@
 # Example app Golang
-Dockerfile for Golang example app
+[Dockerfile](https://docs.docker.com/language/golang/build-images/) for Golang example app
 
 ![изображение](https://user-images.githubusercontent.com/67045661/172238031-9c32ebe5-af6d-4294-9b0f-65f65338f54c.png)
 
@@ -19,6 +19,9 @@ go run main.go
 ```
 or compile and run compiled app:
 ```bash
+go mod download
+
 go build -o example-app
+
 example-app
 ```
